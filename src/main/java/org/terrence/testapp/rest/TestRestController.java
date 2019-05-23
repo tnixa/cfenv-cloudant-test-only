@@ -9,7 +9,6 @@ import com.cloudant.client.api.CloudantClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.terrence.testapp.domain.Status;
 
 @RestController
 public class TestRestController {
@@ -19,10 +18,6 @@ public class TestRestController {
 
   StringWriter sw = new StringWriter();
   PrintWriter pw = new PrintWriter(sw);
-
-  // create test object with random id and fixed message
-  String id = UUID.randomUUID().toString();
-  Status test = new Status();
 
   // run the test
   @RequestMapping(value = "/test", produces = "text/plain")
